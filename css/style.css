@@ -14,12 +14,12 @@ body {
     background-color: #F4F7F9;
     margin: auto;
     max-width: 1440px;
-    height: 100vh;
-    min-height: 728px;
+    min-height: 100vh;
+/*    min-height: 728px;*/
 }
 
 #chat-section {
-    width: 28%;
+    width: calc( 40000% / 1440);
     height: 100%;
 }
 
@@ -62,44 +62,71 @@ body {
 .chat-conversation {
     height: calc((100% - 66px) / 6);
     min-height: 100px;
-    width: calc(100% - 32px);
     border-radius: 5px;
     background-color: #FFFFFF;
-    box-shadow: 0 0 4px 1px rgba(80, 163, 253, 0.34);
-    margin: 8px 16px;
-    padding: 16px;
+    margin: 8px 16px 8px 12px;
+    padding: 16px 10px 16px 16px;
     box-sizing: border-box;
-    text-overflow: ellipsis;
 }
 
 .chat-conversation:first-of-type {
     border: 1px solid rgba(80, 163, 253, 0.6);
+    box-shadow: 0 0 4px 1px rgba(80, 163, 253, 0.34);
+
 }
 
+.chat-conversation.online{
+    position: relative;
+}
+
+.chat-conversation.online:after{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    background-color: #4DA1FF;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 10px;
+}
+
+.header-conversation {
+    flex-wrap: nowrap;
+}
 
 .header-conversation > h2 {
+    flex: 0 1 auto;
     color: #65696E;
     font-family: 'Catamaran', sans-serif;
     font-size: 18px;
     font-weight: bold;
     line-height: 24px;
-    display: inline-block;
-    width: calc(100% - 109px);
+    height: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+}
+
+.online h2 {
+    position: relative;
+    padding-right: 65px;
 }
 
 .online h2:after {
     content: "Online";
     font-size: 11px;
-    margin-left: 15px;
-    vertical-align: super;
+    position: absolute;
+    text-align: center;
+    width: 65px;
+    right: 0px;
+    top: -6px;
 }
 
 .chat-status {
-    display: inline-block;
     text-align: right;
-    margin-right: 0;
-    margin-left: auto;
-    width: 105px;
+    flex: 1 0 auto;
+    margin-left: 15px;
 }
 
 .chat-status img {
@@ -107,9 +134,18 @@ body {
     height: 24px;
     border-radius: 50%;
     vertical-align: text-bottom;
+    margin-left: -10px;
+    position: relative;
+    z-index: 0;
 }
 
-.last-log{
+
+.chat-status img:first-of-type {
+    margin-left: 0;
+    z-index: 1;
+}
+
+.last-log {
     color: #989898;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
@@ -118,25 +154,31 @@ body {
     letter-spacing: 0.5px;
     line-height: 16px;
     text-align: right;
-    margin-left: 8px;
+    margin-left: 4px;
 }
 
 .last-log.orange {
     color: #FF6D4A;
 }
 
-.last-log.orange:after{
-    content:"";
+.last-log.orange:after {
+    content: "";
     display: inline-block;
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: #FF6D4A;
     margin-left: 8px;
+    margin-right: 6px;
 }
 
-.chat-conversation article{
+.chat-conversation article {
     margin-top: 8px;
+    flex-wrap: nowrap;
+}
+
+.chat-conversation .article-img {
+    margin-top: 18px;
 }
 
 .chat-conversation article > img {
@@ -145,3 +187,56 @@ body {
     border-radius: 50%;
 }
 
+.chat-conversation article > p {
+    max-width: 282px;
+    margin-right: 24px;
+    color: #4A4A4A;
+    font-family: 'Catamaran', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    box-sizing: border-box;
+    max-height: 54px;
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+    word-wrap: normal;
+  }
+
+.chat-conversation article > img + p {
+    margin-top: 6px;
+    margin-left: 7px;
+    padding-left: 12px;
+}
+
+.chat-conversation .message-important {
+    border: 0.5px dotted #FECE27;
+    border-radius: 4px 2px 4px 4px;
+    background-color: #FFFFFF;
+    padding: 6px 12px;
+    margin-top: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.chat-conversation .message-important:after {
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    height: 9.94px;
+    width: 9.63px;
+    background: #fece27;
+    background: -moz-linear-gradient(45deg, #fece27 0%, #fece27 50%, #ffffff 50%, #ffffff 100%);
+    background: -webkit-linear-gradient(45deg, #fece27 0%, #fece27 50%, #ffffff 50%, #ffffff 100%);
+    background: linear-gradient(45deg, #fece27 0%, #fece27 50%, #ffffff 50%, #ffffff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fece27', endColorstr='#ffffff', GradientType=1);
+}
+
+.three-dots .dot{
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    background-color: #9B9B9B;
+    border-radius: 50%;
+}
