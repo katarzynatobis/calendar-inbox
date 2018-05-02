@@ -43,7 +43,7 @@
                 </header>
 
                 <article class="flexbox-row">
-                    <p>Hi</p>
+                    <p class="textbox">Hi</p>
                 </article>
             </section>
 
@@ -59,7 +59,7 @@
                 </header>
 
                 <article class="flexbox-row">
-                    <p>What s teh price for your shirtz ?</p>
+                    <p class="textbox">What s teh price for your shirtz ?</p>
                 </article>
             </section>
 
@@ -75,7 +75,7 @@
                 </header>
 
                 <article class="flexbox-row">
-                    <p>I have a real problem with returning my vacuum cleaner and it’s driving me mad! </p>
+                    <p class="textbox">I have a real problem with returning my vacuum cleaner and it’s driving me mad! </p>
                 </article>
             </section>
 
@@ -92,7 +92,7 @@
 
                 <article class="article-img flexbox-row">
                     <img src="img/avatar2.jpg" alt="avatar 2" class="img-conversation">
-                    <p>Hi! I’m Mike, I’m on it!</p>
+                    <p class="textbox">Hi! I’m Mike, I’m on it!</p>
                 </article>
             </section>
 
@@ -110,7 +110,7 @@
 
                 <article class="article-img flexbox-row">
                     <img src="img/avatar2.jpg" alt="avatar 2" class="img-conversation">
-                    <p class="message-important">This is a social influencer, careful!</p>
+                    <p class="textbox message-important">This is a social influencer, careful!</p>
                 </article>
             </section>
 
@@ -126,13 +126,14 @@
 
                 <article class="article-img flexbox-row">
                     <img src="img/avatar2.jpg" alt="avatar 2" class="img-conversation">
-                    <p class="three-dots">
+                    <p class="textbox three-dots">
                         <span class="dot"></span>
                         <span class="dot"></span>
                         <span class="dot"></span>
                     </p>
                 </article>
             </section>
+
         </main>
     </section>
 
@@ -143,7 +144,7 @@
             <h1>Calendar</h1>
             <div class="date-selector flexbox-row">
                 <div id="left-arrow">&#60;</div>
-                <div id="date-range">13 October  - 17 October</div>
+                <div id="date-range">13 October - 17 October</div>
                 <div id="right-arrow">&#62;</div>
             </div>
             <div id="month-week-selector" class="flexbox-row">
@@ -152,232 +153,234 @@
             </div>
         </header>
         <main>
-            <div class="calendar-body">
+            <div id="calendar-body">
                 <table>
-                   <tr>
-                        <th>GMT +02</th>
-                        <td>Mon 24/04</td>
-                        <td>Tue 25/04</td>
-                        <td>Wed 26/04</td>
-                        <td>Thu 27/04</td>
-                        <td>Fri 28/04</td>
-                    </tr>
-                    <tr>
-                        <th>07:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
+                    <thead>
+                        <tr id="first-row">
+                            <th>GMT+02</th>
+                            <td data-day="Mon">Mon 24/04</td>
+                            <td class="today" data-day="Tue">Tue 25/04</td>
+                            <td data-day="Wed">Wed 26/04</td>
+                            <td data-day="Thu">>Thu 27/04</td>
+                            <td data-day="Fri">Fri 28/04</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="row" data-hour="07:00">
+                            <th rowspan="2">07:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="07:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="08:00">
+                            <th rowspan="2">08:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="08:30">
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>08:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="09:00">
+                            <th rowspan="2">09:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="09:30">
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>09:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="10:00">
+                            <th rowspan="2">10:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="10:30">
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>10:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="11:00">
+                            <th rowspan="2">11:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="11:30">
 
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>11:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>12:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>13:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>14:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>15:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>16:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>17:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>18:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>19:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th>20:00</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="12:00">
+                            <th rowspan="2">12:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row"  data-hour="12:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="13:00">
+                            <th rowspan="2">13:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="13:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="14:00">
+                            <th rowspan="2">14:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="14:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="15:00">
+                            <th rowspan="2">15:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="15:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="16:00">
+                            <th rowspan="2">16:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="16:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="17:00">
+                            <th rowspan="2">17:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="17:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="18:00">
+                            <th rowspan="2">18:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="18:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="19:00">
+                            <th rowspan="2">19:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="19:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="20:00">
+                            <th rowspan="2">20:00</th>
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                        <tr class="row" data-hour="20:30">
+                            <td data-day="Mon"></td>
+                            <td class="today" data-day="Tue"></td>
+                            <td data-day="Wed"></td>
+                            <td data-day="Thu"></td>
+                            <td data-day="Fri"></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </main>
