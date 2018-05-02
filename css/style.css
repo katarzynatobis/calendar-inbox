@@ -15,12 +15,11 @@ body {
     margin: auto;
     max-width: 1440px;
     min-height: 100vh;
-/*    min-height: 728px;*/
 }
 
 #chat-section {
     width: calc( 40000% / 1440);
-    height: 100%;
+    min-height: 100%;
 }
 
 
