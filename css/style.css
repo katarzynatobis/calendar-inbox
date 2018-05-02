@@ -372,7 +372,7 @@ input:checked + label:after {
 }
 
 #calendar-body #first-row {
-    height: calc(7800% / 640);
+
     box-sizing: border-box;
     border-bottom: 1px solid #E9EFF4;
 }
@@ -390,7 +390,9 @@ input:checked + label:after {
 #calendar-body #first-row th {
     vertical-align: bottom;
     padding-bottom: 16px;
+    height: 12%;
 }
+
 
 #calendar-body tr th {
     padding-right: 16px;
@@ -403,6 +405,7 @@ input:checked + label:after {
 #calendar-body td {
     box-sizing: border-box;
     border-left: 3px solid #E9EFF4;
+    height: 3%;
 }
 
 #calendar-body .row:nth-of-type(2n+1) {
@@ -419,28 +422,57 @@ input:checked + label:after {
     border-bottom: 0;
 }
 
-#calendar-body #first-row .today{
+#calendar-body #first-row .today {
     color: #52A3FC;
     font-weight: bold;
-    border-color: #4DA1FF;
+    border-left: 3px solid #4DA1FF;
+    border-right: 3px solid #4DA1FF;
 }
 
-#calendar-body .row .today{
-    border-color: #4DA1FF;
-    background-color: rgba(255,208,18,.03);;
+#calendar-body .row .today {
+    border-left: 3px solid #4DA1FF;
+    border-right: 3px solid #4DA1FF;
+    background-color: rgba(255, 208, 18, .03);
+    ;
 }
 
-#calendar-body .today + td{
-    border-color: #4DA1FF;
-}
-
-#calendar-body #first-row .today:before{
+#calendar-body #first-row .today:before {
     background-color: #52A3FC;
     height: 1px;
-    top: calc((7800% / 640) + ( 725% / 14 ) * (562 / 640));
+    top: calc((7800% / 640) + ( 725% / 14) * (562 / 640));
     position: absolute;
     width: 17.5%;
     content: "";
     display: block;
+}
 
+#calendar-body .row  .event {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 5px 8px;
+    vertical-align: middle;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
+}
+
+#calendar-body .row  .event .name{
+    font-size: 13px;
+    line-height: 16px;
+}
+
+#calendar-body .row  .past {
+    background-color: #EEF1F3;
+    color: #8B8B8B;
+}
+
+#calendar-body .row .future{
+    background-color: #EFF6FE;
+    color: #4a4a4a;
+}
+
+#calendar-body .row .next {
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(77,161,255,0.6), 0 0 7px 1px rgba(80,163,253,0.34);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(77,161,255,0.6),0 0 7px 1px rgba(80,163,253,0.34);
+    box-shadow: inset 0px 0px 0px 1px rgba(77,161,255,0.6), 0 0 7px 1px rgba(80,163,253,0.34);
 }
