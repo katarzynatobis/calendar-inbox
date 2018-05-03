@@ -93,12 +93,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
     
     let checkbox = document.getElementsByTagName("label")[0];
     let circle = document.getElementsByClassName("circle")[0];
-    let ifChecked = true;
+    let ifChecked = false;
     checkbox.addEventListener("click", function () {
         if (ifChecked) {
-            circle.style.left = this.clientWidth - 25 + "px";
+            circle.style.left = this.clientWidth - 3 + "px";
         } else {
-            circle.style.left = "25px";
+            circle.style.left = "3px";
         }
         ifChecked = !ifChecked;
     })
