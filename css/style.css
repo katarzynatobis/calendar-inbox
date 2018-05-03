@@ -238,8 +238,7 @@ body {
 
 .chat-conversation article > img + .textbox {
     margin-top: 6px;
-    margin-left: 7px;
-    padding-left: 12px;
+    margin-left: 19px;
 }
 
 .chat-conversation .message-important {
@@ -252,10 +251,6 @@ body {
     max-height: 28px;
     background-clip: border-box;
     position: relative;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    word-wrap: normal;
 }
 
 .chat-conversation .message-important:after {
