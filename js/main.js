@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let chatConversation = document.getElementsByClassName("chat-conversation"); // all conversation boxes
 
 
-    // open and close inbox on mobile
+    //  open and close inbox on mobile
 
     buttonOpenInbox.addEventListener("click", function () {
         if (counterInbox) {
@@ -62,7 +62,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         }
     }
 
-    //live version
+    //      live version
+    
     //    if (now.getDay() > 5 || now.getHours() >= 21 || now.getHours() < 7 ){
     //        console.log("poza tabela");
     //    }
@@ -76,6 +77,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //        }
     //    }
 
+    
+    //      max string length depending on box size in textboxes
+    
     let textboxes = document.getElementsByClassName("textbox")
     let height = textboxes[0].parentElement.parentElement.clientHeight;
     let width = textboxes[0].parentElement.parentElement.clientWidth;
@@ -86,4 +90,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
             textboxes[i].innerText = textboxes[i].innerText.substr(0, maxCharacters) + " ...";
         }
     }
+    
+    let checkbox = document.getElementsByTagName("label")[0];
+    let circle = document.getElementsByClassName("circle")[0];
+    let ifChecked = true;
+    checkbox.addEventListener("click", function () {
+        if (ifChecked) {
+            circle.style.left = this.clientWidth - 25 + "px";
+        } else {
+            circle.style.left = "25px";
+        }
+        ifChecked = !ifChecked;
+    })
 });

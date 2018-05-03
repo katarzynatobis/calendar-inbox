@@ -366,11 +366,10 @@ label {
     margin: 0 11px;
 }
 
-label:after {
-    content: '';
+label .circle {
     position: absolute;
     top: 2px;
-    left: 3px;
+    left: 25px;
     width: 22px;
     height: 22px;
     background: #4a4a4a;
@@ -379,8 +378,7 @@ label:after {
 }
 
 
-input:checked + label:after {
-    left: calc(100% - 3px);
+input:checked + label .circle {
     transform: translateX(-100%);
 }
 
@@ -514,6 +512,7 @@ input:checked + label:after {
 #calendar-body .row .today {
     border-left: 3px solid #4DA1FF;
     background-color: rgba(255, 208, 18, .03);
+    position: relative;
 }
 
 #calendar-body .today + td {
@@ -560,4 +559,8 @@ input:checked + label:after {
     width: 100%;
     border-bottom: 1px solid #52A3FC;
     display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
 }
