@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hover.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -23,7 +24,7 @@
 
         <nav>
             <button class="chat-nav">new</button>
-            <button class="chat-nav button-em">open</button>
+            <button id="button-em" class="chat-nav">open</button>
             <button class="chat-nav">yours</button>
         </nav>
 
@@ -161,217 +162,137 @@
                             <td data-day="Mon">Mon 24/04</td>
                             <td class="today" data-day="Tue">Tue 25/04</td>
                             <td data-day="Wed">Wed 26/04</td>
-                            <td data-day="Thu">>Thu 27/04</td>
+                            <td data-day="Thu">Thu 27/04</td>
                             <td data-day="Fri">Fri 28/04</td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="row" data-hour="07:00">
-                            <th rowspan="2">07:00</th>
+                            <th>07:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="07:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="08:00">
-                            <th rowspan="2">08:00</th>
+                            <th>08:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="08:30">
-
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="09:00">
-                            <th rowspan="2">09:00</th>
+                            <th>09:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="09:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                       
                         <tr class="row" data-hour="10:00">
-                            <th rowspan="2">10:00</th>
+                            <th>10:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
-                            <td rowspan="2" class="event future" data-day="Wed">10:00-11:00 <br><span class="name">Emilie Bryant</span></td>
+                            <td class="event future" data-day="Wed">10:00-11:00 <br><span class="name">Emilie Bryant</span></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="10:30">
-
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="11:00">
-                            <th rowspan="2">11:00</th>
-                            <td rowspan="2" class="event past" data-day="Mon">11:00-12:00 <br><span class="name">Olga Elis</td>
+                            <th>11:00</th>
+                            <td class="event past" data-day="Mon">11:00-12:00 <br><span class="name">Olga Elis</td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
-                            <td rowspan="2" class="event future" data-day="Thu">11:00-12:00 <br><span class="name">Fannie White</span></td>
+                            <td class="event future" data-day="Thu">11:00-12:00 <br><span class="name">Fannie White</span></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="11:30">
-
-                            
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="12:00">
-                            <th rowspan="2">12:00</th>
-                            <td rowspan="2" class="event past" data-day="Mon">12:00-13:00 <br><span class="name">Carolyn Fuller</span></td>
-                            <td rowspan="2" class="today event past" data-day="Tue">12:00-13:00 <br><span class="name">Craig Nelson</span></td>
+                            <th>12:00</th>
+                            <td class="event past" data-day="Mon">12:00-13:00 <br><span class="name">Carolyn Fuller</span></td>
+                            <td class="today event past" data-day="Tue">12:00-13:00 <br><span class="name">Craig Nelson</span></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row"  data-hour="12:30">
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="13:00">
-                            <th rowspan="2">13:00</th>
+                            <th>13:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
-                            <td rowspan="2" class="event future" data-day="Wed">13:00-14:00 <br><span class="name">Maude Goodrich</span></td>
+                            <td class="event future" data-day="Wed">13:00-14:00 <br><span class="name">Maude Goodrich</span></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="13:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="14:00">
-                            <th rowspan="2">14:00</th>
-                            <td rowspan="2" class="event past" data-day="Mon">14:00-15:00 <br><span class="name">Elnora Castro</span></td>
-                            <td class="today" data-day="Tue"></td>
+                            <th>14:00</th>
+                            <td class="event past" data-day="Mon">14:00-15:00 <br><span class="name">Elnora Castro</span></td>
+                            <td class="today actual-time" data-day="Tue"> <span class="line"> </span></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="14:30">
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="15:00">
-                            <th rowspan="2">15:00</th>
+                            <th>15:00</th>
                             <td data-day="Mon"></td>
-                            <td rowspan="2" class="today event next future" data-day="Tue">15:00-16:00 <br><span class="name">Nina Saunders</span></td>
+                            <td class="today event next future" data-day="Tue">15:00-16:00 <br><span class="name">Nina Saunders</span></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
-                            <td rowspan="2" class="event future" data-day="Fri">15:00-16:00 <br><span class="name">Jose Norman</span></td>
+                            <td class="event future" data-day="Fri">15:00-16:00 <br><span class="name">Jose Norman</span></td>
                         </tr>
-                        <tr class="row" data-hour="15:30">
-                            <td data-day="Mon"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                       
                         <tr class="row" data-hour="16:00">
-                            <th rowspan="2">16:00</th>
+                            <th>16:00</th>
                             <td data-day="Mon"></td>
-                            <td rowspan="2" class="today event future" data-day="Wed">16:00-17:00 <br><span class="name">Nathaniel King</span></td>
+                            <td class="today event future" data-day="Wed">16:00-17:00 <br><span class="name">Nathaniel King</span></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="16:30">
-                            <td data-day="Mon"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="17:00">
-                            <th rowspan="2">17:00</th>
+                            <th>17:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="17:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                       
                         <tr class="row" data-hour="18:00">
-                            <th rowspan="2">18:00</th>
+                            <th>18:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="18:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="19:00">
-                            <th rowspan="2">19:00</th>
+                            <th>19:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="19:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+                        
                         <tr class="row" data-hour="20:00">
-                            <th rowspan="2">20:00</th>
+                            <th>20:00</th>
                             <td data-day="Mon"></td>
                             <td class="today" data-day="Tue"></td>
                             <td data-day="Wed"></td>
                             <td data-day="Thu"></td>
                             <td data-day="Fri"></td>
                         </tr>
-                        <tr class="row" data-hour="20:30">
-                            <td data-day="Mon"></td>
-                            <td class="today" data-day="Tue"></td>
-                            <td data-day="Wed"></td>
-                            <td data-day="Thu"></td>
-                            <td data-day="Fri"></td>
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
