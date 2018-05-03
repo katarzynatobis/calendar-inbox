@@ -15,7 +15,6 @@ body {
     margin: auto;
     max-width: 1440px;
     height: 100vh;
-    overflow-x: scroll;
 }
 
 #chat-section {
