@@ -15,6 +15,7 @@ body {
     margin: auto;
     max-width: 1440px;
     height: 100vh;
+    overflow-x: scroll;
 }
 
 #chat-section {
@@ -28,7 +29,9 @@ body {
 #arrow-chat{
     position: absolute;
     top: 50%;
-    left: calc(100% - 10px);
+    right: -50px;
+    height: 40px;
+    width: 60px;
     padding: 8px 8px 4px 8px;
     box-sizing: border-box;
     border-radius: 0 0 4px 4px ;
@@ -95,7 +98,7 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     border: 1px solid transparent;
-    transition: all 400ms ease-in-out;
+    transition: all 200ms linear;
 }
 
 .chat-conversation:first-of-type {
@@ -513,21 +516,6 @@ input:checked + label:after {
     border-left: 3px solid #4DA1FF;
 }
 
-#calendar-body .actual-time{
-    position: relative;
-}
-
-#calendar-body .actual-time:before {
-    background-color: #52A3FC;
-    height: 1px;
-    top: 25%;
-    position: absolute;
-    left: 0;
-    right: 0;
-    content: "";
-    display: block;
-}
-
 
 #calendar-body .row  .event {
     font-size: 12px;
@@ -563,7 +551,9 @@ input:checked + label:after {
     box-shadow: inset 0px 0px 0px 1px rgba(77,161,255,0.6), 0 0 7px 1px rgba(80,163,253,0.34);
 }
 
-.line{
-    height: 100%;
-    display: block;
+.line {
+    height: 25%;
+    width: 100%;
+    border-bottom: 1px solid #52A3FC;
+    display: inline-block;
 }

@@ -4,8 +4,8 @@
     }
 
     #chat-section {
-        width: 404px;
         position: absolute;
+        width: 404px;
         left: -404px;
         background-color: #F4F7F9;
         z-index: 10;
@@ -13,9 +13,7 @@
         -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
         transition: all 400ms ease-in-out;
-/*        max-width: calc(100vw - 40px);*/
     }
-
 
     #calendar-section {
         width: 100vw;
@@ -32,6 +30,8 @@
     #arrow-chat {
         display: block;
     }
+
+
 }
 
 @media all and (max-width: 600px) {
@@ -47,10 +47,7 @@
     #calendar-section h1 {
         display: none;
     }
-}
 
-
-@media all and (max-width: 400px) {
     .chat-conversation img {
         display: none;
     }
@@ -65,14 +62,27 @@
         margin-top: 8px;
     }
 
+    .chat-nav {
+        width: 65px;
+    }
+}
+
+
+@media all and (max-width: 410px) {
+
+    #chat-section {
+        width: calc(100% - 50px);
+        left: calc(-100% + 50px);
+    }
+
     #calendar-section h1 {
         display: none;
     }
 
-    #date-range{
+    #date-range {
         padding: 0 5px;
     }
-    
+
     #date-range #short-date {
         display: inline;
     }

@@ -5,7 +5,6 @@
 .chat-conversation:hover {
     border-color: #4DA1FF;
     background-color: #EFF6FE;
-    height: calc(((100% - (5 * 8px)) / 6) + 20px);
 }
 
 #left-arrow:hover,
@@ -23,3 +22,11 @@
 #month:hover .tooltip {
     display: inline-block;
 }
+
+.chat-conversation:hover .message-important:after {
+    background: -moz-linear-gradient(45deg, #fece27 0%, #fece27 50%, #EFF6FE 50%, #EFF6FE 100%);
+    background: -webkit-linear-gradient(45deg, #fece27 0%, #fece27 50%, #EFF6FE 50%, #EFF6FE 100%);
+    background: linear-gradient(45deg, #fece27 0%, #fece27 50%, #EFF6FE 50%, #EFF6FE 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fece27', endColorstr='#EFF6FE', GradientType=1);
+}
+
