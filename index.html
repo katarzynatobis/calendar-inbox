@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -19,7 +20,7 @@
     <!--   chat section   -->
 
     <section id="chat-section">
-
+        <div id="arrow-chat">INBOX &#8744;</div>
         <!--       chat navigation       -->
 
         <nav>
@@ -101,7 +102,7 @@
 
             <section class="chat-conversation online">
                 <header class="header-conversation flexbox-row ">
-                    <h2>John Wicked hjhghg jghjg</h2>
+                    <h2>John Wicked</h2>
                     <div class="chat-status  ">
                         <img src="img/avatar1.jpg" alt="avatar 1">
                         <img src="img/avatar2.jpg" alt="avatar 2">
@@ -145,12 +146,14 @@
             <h1>Calendar</h1>
             <div class="date-selector flexbox-row">
                 <div id="left-arrow">&#60;</div>
-                <div id="date-range">13 October - 17 October</div>
+                <div id="date-range"><span id="long-date">13 October - 17 October</span>
+                <span id="short-date">13 Oct - 17 Oct</span></div>
                 <div id="right-arrow">&#62;</div>
             </div>
             <div id="month-week-selector" class="flexbox-row">
-                month
-                <input type="checkbox" id="switch" checked/><label for="switch"></label> week
+                <span id="month">month<span class="tooltip">Switch to change to month view</span></span>
+                <input type="checkbox" id="switch"  checked/><label for="switch"></label> <span id="week">week</span>
+                <span class="tooltip">Switch to change to month view</span>
             </div>
         </header>
         <main>

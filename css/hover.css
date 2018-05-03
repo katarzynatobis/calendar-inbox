@@ -1,0 +1,25 @@
+.chat-nav:hover {
+    background-color: #7C7341;
+}
+
+.chat-conversation:hover {
+    border-color: #4DA1FF;
+    background-color: #EFF6FE;
+    height: calc(((100% - (5 * 8px)) / 6) + 20px);
+}
+
+#left-arrow:hover,
+#right-arrow:hover {
+	background-color: #4DA1FF;
+    color: #fff;
+}
+
+#calendar-body .row .future:hover {
+    -webkit-box-shadow: inset 0px 0px 0px 1px #4DA1FF;
+    -moz-box-shadow: inset 0px 0px 0px 1px #4DA1FF;
+    box-shadow: inset 0px 0px 0px 1px #4DA1FF;
+}
+
+#month:hover .tooltip {
+    display: inline-block;
+}

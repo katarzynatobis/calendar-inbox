@@ -1,0 +1,87 @@
+@media all and (max-width:1150px) {
+    body {
+        flex-wrap: nowrap;
+    }
+
+    #chat-section {
+        width: 404px;
+        position: absolute;
+        left: -404px;
+        background-color: #F4F7F9;
+        z-index: 10;
+        -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
+        -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
+        transition: all 400ms ease-in-out;
+        max-width: calc(100vw - 40px);
+    }
+
+
+    #calendar-section {
+        width: 100vw;
+    }
+
+    #calendar-section header {
+        padding-left: calc( 3000% / 1034);
+    }
+
+    #calendar-section main {
+        margin-left: 24px;
+    }
+
+    #arrow-chat {
+        display: block;
+    }
+}
+
+@media all and (max-width: 600px) {
+    #left-arrow,
+    #right-arrow {
+        font-size: 20px;
+    }
+
+    #date-range {
+        font-size: 12px;
+    }
+
+    #calendar-section h1 {
+        display: none;
+    }
+}
+
+
+@media all and (max-width: 400px) {
+    .chat-conversation img {
+        display: none;
+    }
+
+    .chat-conversation article > img + .textbox {
+        margin-top: 0;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .chat-conversation .article-img {
+        margin-top: 8px;
+    }
+
+    #calendar-section h1 {
+        display: none;
+    }
+
+    #date-range{
+        padding: 0 5px;
+    }
+    
+    #date-range #short-date {
+        display: inline;
+    }
+
+    #date-range #long-date {
+        display: none;
+    }
+
+    label {
+        width: 40px;
+    }
+}

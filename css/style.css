@@ -19,9 +19,29 @@ body {
 
 #chat-section {
     width: calc( 40000% / 1440);
-    height: calc(100% - 30px);
+    height: 100%;
+    position: relative;
+    padding-bottom: 30px;
+    box-sizing: border-box;
 }
 
+#arrow-chat{
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 10px);
+    padding: 8px 8px 4px 8px;
+    box-sizing: border-box;
+    border-radius: 0 0 4px 4px ;
+    background-color: #444D56;
+    text-align: center;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    transform: rotate(-90deg);
+}
 
 #chat-section > nav {
     height: 48px;
@@ -58,7 +78,8 @@ body {
     height: calc(100% - 50px);
     padding: 4px 6px 4px 0;
     box-sizing: border-box;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: visible;
     margin-left: 12px;
     margin-right: 10px;
     display: block;
@@ -254,7 +275,9 @@ body {
 
 #calendar-section {
     width: calc( 103400% / 1440);
-    height: calc(100% - 30px);
+    height: 100%;
+    padding-bottom: 30px;
+    box-sizing: border-box;
 }
 
 #calendar-section > header {
@@ -294,16 +317,20 @@ h1 {
     font-size: 27px;
     color: #444D56;
     cursor: pointer;
+    transition: all 400ms ease-in-out;
 }
 
 #date-range {
     height: 28px;
-    width: 174px;
     color: #FFFFFF;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 28px;
     padding: 0 12.5px;
+}
+
+#date-range #short-date{
+    display: none;
 }
 
 #month-week-selector {
@@ -341,13 +368,47 @@ label:after {
     height: 22px;
     background: #4a4a4a;
     border-radius: 50%;
-    transition: 0.3s;
+    transition: 400ms ease-in-out;
 }
 
 
 input:checked + label:after {
     left: calc(100% - 3px);
     transform: translateX(-100%);
+}
+
+#month, #week{
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip{
+    display: none;
+    text-transform: none;
+    background-color: rgba(87,102,117,0.95);
+    font-size: 11px;
+    white-space: nowrap;
+    letter-spacing: 0.39px;
+    line-height: 13px;
+    text-align: center;
+    padding: 8px 12.5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgba(87,102,117,0.95) transparent;
 }
 
 #calendar-section > main {
@@ -477,6 +538,8 @@ input:checked + label:after {
     -moz-box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
     box-shadow: inset 0px 0px 0px 1px rgba(255, 255, 255, 1);
     background-image: none;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
 }
 
 #calendar-body .row  .event .name{
