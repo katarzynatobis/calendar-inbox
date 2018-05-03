@@ -36,7 +36,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     chatConversation[0].parentElement.addEventListener("mouseout", function () {
         for (let j = 0; j < chatConversation.length; j++) {
-            chatConversation[j].style.height = ((chatConversation[j].parentElement.clientHeight - ((chatConversation.length - 1) * 8) - 8) / chatConversation.length) + "px";;
+            const height = ((chatConversation[j].parentElement.clientHeight - ((chatConversation.length - 1) * 8) - 8) / chatConversation.length);
+            chatConversation[j].style.height = ((height > 100) ? height : 100) + "px";;
         }
     })
 
