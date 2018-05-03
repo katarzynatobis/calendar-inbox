@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let chatSection = document.getElementById("chat-section"); //whole chat section
     let chatConversation = document.getElementsByClassName("chat-conversation"); // all conversation boxes
 
-    
-// open and close inbox on mobile
-    
+
+    // open and close inbox on mobile
+
     buttonOpenInbox.addEventListener("click", function () {
         if (counterInbox) {
             buttonOpenInbox.innerHTML = "INBOX &#8743;";
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         counterInbox = !counterInbox;
     })
 
-    
-//    hover animation of conversation box high
-    
+
+    //    hover animation of conversation box high
+
     for (let i = 0; i < chatConversation.length; i++) {
         chatConversation[i].addEventListener("mouseover", function () {
             for (let j = 0; j < chatConversation.length; j++) {
@@ -43,9 +43,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-//    show actual time on calendar
-    
-    
+    //    show actual time on calendar
+
+
     const now = new Date();
     let actualDate = document.createElement("span");
     let date;
@@ -76,7 +76,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     //        }
     //    }
 
+    let textboxes = document.getElementsByClassName("textbox")
+    let height = textboxes[0].parentElement.parentElement.clientHeight;
+    let width = textboxes[0].parentElement.parentElement.clientWidth;
+    let maxCharacters = ((height - 50) / 20) * ((width - 15) / 10);
 
-
-
+    for (let i = 0; i < chatConversation.length; i++) {
+        if (textboxes[i].innerText.length > maxCharacters) {
+            textboxes[i].innerText = textboxes[i].innerText.substr(0, maxCharacters) + " ...";
+        }
+    }
 });

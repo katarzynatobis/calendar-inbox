@@ -252,6 +252,10 @@ body {
     max-height: 28px;
     background-clip: border-box;
     position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    word-wrap: normal;
 }
 
 .chat-conversation .message-important:after {
