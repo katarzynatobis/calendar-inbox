@@ -15,7 +15,9 @@ body {
     line-height:1;
 }
 
-
+button:focus {
+    outline: 0;
+}
 
 table {
     border-collapse: separate;
