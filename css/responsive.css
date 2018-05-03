@@ -13,7 +13,7 @@
         -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.27);
         transition: all 400ms ease-in-out;
-        max-width: calc(100vw - 40px);
+/*        max-width: calc(100vw - 40px);*/
     }
 
 
