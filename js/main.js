@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const dateHour = document.querySelectorAll('[data-hour="' + now.getHours() + '"]')
         for (let i = 0; i < dateHour.length; i++) {
             date = dateHour[i].querySelectorAll('[data-day="' + now.getDay() + '"]');
-            actualDate.style.height = (15 / 60) * date[0].clientHeight + 'px';
+            actualDate.style.height = (now.getMinutes() / 60) * date[0].clientHeight + 'px';
             date[0].appendChild(actualDate);
 
         }
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     let height = textboxes[0].parentElement.parentElement.clientHeight;
     let width = textboxes[0].parentElement.parentElement.clientWidth;
     let maxCharacters = ((height - 50) / 20) * ((width - 15) / 10);
-    let maxCharactersImportant = ( width / 10);
+    let maxCharactersImportant = ((( width - 15)/ 10) -1) * ((height - 50) / 20);
 
     for (let i = 0; i < textboxes.length; i++) {
         if (textboxes[i].innerText.length > maxCharacters) {
